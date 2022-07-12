@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahavir Diagnostic Centre & Interventional Radiology Clinic</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="splide.min.css">
+</head>
+
+<body>
+    <header class="flex flex-row justify-center items-center space-x-4 my-4">
+        <a href="index.html"><img src="./img/mahavir-diagnostic-centre-logo.png" alt="Mahavir Diagnostic Centre Logo"
+                class="w-16 md:w-32 lg:w-40"></a>
+        <h1 class="lg:inline font-bold text-xs md:text-xl text-center"><a href="index.html">Mahavir Diagnostic Centre
+                &<br> Interventional Radiology Clinic</a></h1>
+    </header>
+    <nav class="bg-theme-orange flex flex-col justify-center relative">
+        <div class="md:hidden menu-toggle flex flex-col items-center cursor-pointer py-2">
+            <div class="bg-white w-8 h-1 my-1 bar1 origin-top-right transition-all duration-300"></div>
+            <div class="bg-white w-8 h-1 my-1 bar2 transition-all duration-300"></div>
+            <div class="bg-white w-8 h-1 my-1 bar3 origin-bottom-right transition-all duration-300"></div>
+        </div>
+        <ul
+            class="menu overflow-hidden h-0 md:h-auto flex flex-col md:flex-row justify-center pl-8 md:pl-0 md:space-x-16 text-sm md:text-base">
+            <li class="py-3 md:py-5 text-white font-semibold"><a href="index.html">Home</a></li>
+            <li class="py-3 md:py-5 text-white font-semibold"><a href="about.html">About</a></li>
+            <li class="py-3 md:py-5 text-white font-semibold"><a href="#">Services</a></li>
+            <li class="py-3 md:py-5 text-white font-semibold"><a href="gallery.html">Gallery</a></li>
+            <li class="py-3 md:py-5 text-white font-semibold"><a href="careers.html">Careers</a></li>
+            <li class="py-3 md:py-5 text-white font-semibold"><a href="contact.html">Contact</a></li>
+        </ul>
+        <span
+            class="transition-all duration-200 border-b-0 opacity-0 border-solid border-white absolute top-full left-0 underline hidden md:inline"></span>
+    </nav>
+    <main>
+        <section class="splide mx-auto" aria-label="Mahavir Diagnostic Centre & Interventional Radiology Clinic">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><img src="./img/pathology-room.jpg"
+                            data-splide-lazy="./img/pathology-room.jpg" alt="Pathology Room"></li>
+                    <li class="splide__slide"><img src="./img/reception-waiting-area.jpg"
+                            data-splide-lazy="./img/reception-waiting-area.jpg" alt="Reception and waiting area"></li>
+                    <li class="splide__slide"><img src="./img/xray-room.jpg" data-splide-lazy="./img/xray-room.jpg"
+                            alt="X-ray room"></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="splide.min.js"></script>
+    <script>
+        new Splide('.splide', {
+            type: 'loop',
+            width: '1280px',
+            drag: true,
+            lazyLoad: 'nearby',
+            preLoadPages: 0,
+        }).mount();
+    </script>
+</body>
+
+</html>
