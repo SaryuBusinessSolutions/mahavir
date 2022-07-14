@@ -12,13 +12,14 @@
   <link rel="stylesheet" href="<%- page.srcfix %>css/bundle.css">
   <% }else{ %>
   <link rel="stylesheet" href="<%- page.srcfix %>css/fontawsome.css">
+  <link rel="stylesheet" href="<%- page.srcfix %>css/splide.css">
   <link rel="stylesheet" href="<%- page.srcfix %>css/tailwind.css">
   <link rel="stylesheet" href="<%- page.srcfix %>css/main.css">
   <% }%>
 </head>
 
 <body>
-  <%- include("navbar",{ navdata : site.data.sitedata.navdata }) %>
+  <%- include("navbar") %>
   <%- body %>
   <%- include("footer") %>
   
@@ -26,6 +27,7 @@
   <script src="<%- page.srcfix %>js/bundle.js"></script>
   <% }else{ %>
   <script src="<%- page.srcfix %>js/alpine.js"></script>
+  <script src="<%- page.srcfix %>js/splide.js"></script>
   <script src="<%- page.srcfix %>js/main.js"></script>
   <% }%>
 </body>
