@@ -1,0 +1,39 @@
+{
+  "websiteurl": "https://examle.com",
+  "title": "dummy title",
+  "description": "dummy description",
+  "copyright": "dummy copyright",
+  "image": "image.jpg",
+  "favicon": "favicon.ico",
+  "removehtmlext": true,
+  "removehtmlextgen": false,
+  "postPath": "/post",
+  "navdata": [
+    ["Home", ""],
+    ["About", "about"],
+    [
+      "Products",
+      [
+        ["product 1", "product-1"],
+        ["product 2", "product-2"],
+        ["product 3", "product-3"],
+        ["product 4", "product-4"]
+      ]
+    ],
+    ["posts", "posts"],
+    ["Contact", "contact"]
+  ],
+  "footernav": [
+    [
+      ["product 1", "product-1"],
+      ["product 2", "product-2"],
+      ["product 3", "product-3"],
+      ["product 4", "product-4"]
+    ],
+    [
+      ["Home", ""],
+      ["About", "about"],
+      ["Contact", "contact"]
+    ]
+  ]
+}

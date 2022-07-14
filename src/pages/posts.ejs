@@ -1,0 +1,11 @@
+---
+{
+  "title":"all posts",
+}
+---
+
+<div>
+  <% site.posts.forEach(post => { %>
+  <a href="<%- page.srcfix + post.actualpath.substring(1) %>"><%- post.data.title %></a>
+  <% }) %>
+</div>
