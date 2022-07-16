@@ -10,6 +10,7 @@ var h =
   document.body.clientHeight;
 
 document.addEventListener('DOMContentLoaded', () => {
+  splideInit();
 });
 
 document.onscroll = () => {
@@ -44,13 +45,19 @@ function menuExpand() {
   document.querySelector('.bar3').classList.toggle("rotate-45");
 }
 
-new Splide('.splide', {
-  type: 'loop',
-  width: '1280px',
-  drag: true,
-  lazyLoad: 'nearby',
-  preLoadPages: 0,
-}).mount();
+
+function splideInit(){
+  try {
+    new Splide('.splide', {
+      type: 'loop',
+      width: '1280px',
+      drag: true,
+      lazyLoad: 'nearby',
+      preLoadPages: 0,
+    }).mount();
+  } catch (error) {
+  }
+}
 
 menu.forEach(link => link.addEventListener('mouseenter', underlineLink));
 navUl.addEventListener('mouseleave', removeLink);

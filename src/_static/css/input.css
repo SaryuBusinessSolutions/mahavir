@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+  .theame-container{
+    @apply md:mx-16 mx-4;
+  }
+}
