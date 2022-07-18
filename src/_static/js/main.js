@@ -11,9 +11,14 @@ var h =
 
 
 const menu = document.querySelectorAll('nav ul li');
-const underline = document.querySelector('.underline');
+const underline = document.querySelector('.underlinelink');
 const navUl = document.querySelector('nav ul');
 const menuToggle = document.querySelector('.menu-toggle');
+const diagnostic = document.querySelector(".diagnostic");
+const interventional = document.querySelector(".interventional");
+const diagnosticMenu = document.querySelector(".diagnostic-menu");
+const interventionalMenu = document.querySelector(".interventional-menu");
+
 
 document.addEventListener('DOMContentLoaded', () => {
   splideInit();
@@ -28,8 +33,8 @@ window.onload = () => {}
 function underlineLink() {
   try {
     const linkCoords = this.getBoundingClientRect();
-    underline.style.transform = `translate(${linkCoords.left + window.scrollX}px, -3px)`;
-    underline.style.borderBottomWidth = "3px";
+    underline.style.transform = `translate(${linkCoords.left + window.scrollX}px, -4px)`;
+    underline.style.borderBottomWidth = "4px";
     underline.style.width = `${linkCoords.width}px`;
     underline.style.opacity = "100";
   } catch (error) {
@@ -72,11 +77,22 @@ function splideInit(){
   }
 }
 
+function megaMenu() {
+  diagnostic.classList.toggle("bg-white");
+  diagnostic.classList.toggle("text-black");
+  interventional.classList.toggle("bg-white");
+  interventional.classList.toggle("text-black");
+  diagnosticMenu.classList.toggle("hidden");
+  interventionalMenu.classList.toggle("hidden");
+}
+
 function menuInteractive() {
   try {
     menu.forEach(link => link.addEventListener('mouseenter', underlineLink));
     navUl.addEventListener('mouseleave', removeLink);
     menuToggle.addEventListener('click', menuExpand);
+    interventional.addEventListener('click', megaMenu);
+    diagnostic.addEventListener('click', megaMenu);
   } catch (error) {
     if(showlog) console.log(error);
   }
