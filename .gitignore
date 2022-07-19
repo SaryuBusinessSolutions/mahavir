@@ -107,4 +107,4 @@ dist
 ./src/db.json
 
 #tailwind
-src/_static/css/tailwind.css
+./src/_static/css/tailwind.css
