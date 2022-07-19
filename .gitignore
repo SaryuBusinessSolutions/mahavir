@@ -102,4 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+#picogen
 ./src/db.json
+
+#tailwind
+src/_static/css/tailwind.css
