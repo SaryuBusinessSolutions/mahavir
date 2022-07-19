@@ -7,7 +7,7 @@ var w =
 var h =
   window.innerHeight ||
   document.documentElement.clientHeight ||
-  document.body.clientHeight;
+  document.body.clientHeight; 
 
 
 const menu = document.querySelectorAll('nav ul li');
